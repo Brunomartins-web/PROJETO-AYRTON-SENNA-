@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arimo", sans-serif;
+    /* Fonte base */
+    background-color: #020618;
+    /* Fundo azul marinho escuro */
+    color: #F0F0F0;
+    /* Cor do texto padrão */
+    line-height: 1.6;
+}
+
+/* Variáveis de Cores */
+:root {
+    --primary-color: #FDC700;
+    /* Amarelo Dourado para destaque */
+    --secondary-color: #008080;
+    /* Azul Esverdeado para títulos */
+    --background-dark: #0A0A1F;
+    --background-card: #151538;
+}
+
+.secao {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ------------------- Cabeçalho (Header) ------------------- */
+.cabecalho-principal {
+    background-color: #020618;
+    color: #ffff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-imagem {
+    height: 50px;
+    /* Ajuste o tamanho do logo */
+}
+
+.logo {
+    list-style: none;
+    display: flex;
+}
+
+.nav-principal ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 60px
+}
+
+.nav-principal ul li {
+    margin-left: 25px;
+}
+
+.nav-principal ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-principal ul li a #amarelo:hover {
+    transition: color #FDC700 0.3s;
+}
+
+
+
+/* ------------------- Seção Principal (Hero) ------------------- */
+#hero {
+    height: 100vh;
+    background-image: url('../image/Senna-image-preto-e-branco.svg');
+    /* Substitua pelo nome real da imagem */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    /* Espaço para o header fixo */
+}
+
+.sobreposicao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--background-dark) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.conteudo-destaque {
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-destaque {
+    font-size: 90px;
+    /* Tamanho do título adaptável */
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin: 5px;
+    /* Efeito de cores múltiplas simulado com gradiente de texto */
+    background: linear-gradient(90deg, #05DF72, #FDC700, #51A2FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitulo-destaque {
+    font-family: "Arimo", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #CAD5E2;
+
+}
+
+.texto-destaque {
+    font-family: "Arimo", sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: #90A1B9;
+}
+
+/* ------------------- Títulos de Seção ------------------- */
+.titulo-secao {
+    font-family: "Arimo", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #05DF72, #FDC700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.titulo-conquistas {
+    text-align: center;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo-principal-trofeus {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ------------------- Seção Quem Foi Ayrton? ------------------- */
+#about {
+    background-color: var(--background-dark);
+    border-radius: 15px;
+    margin-top: 100px;
+}
+
+.container-sobre {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.container-imagem-sobre {
+    flex: 2;
+    overflow: hidden;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.imagem-sobre {
+    width: 160%;
+    display: flex
+}
+
+.conteudo-texto-sobre {
+    flex: 2;
+}
+
+.conteudo-texto-sobre p {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+}
+
+.conteudo-texto-sobre strong {
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.conteudo-texto-sobre .titulo-secao {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.botao-saiba-mais {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 400;
+    color: #020618
+}
+
+.botao-saiba-mais:hover {
+    background-color: #FFC300;
+    transition: #ffc300 0.3s;
+}
+
+/* ------------------- Seção Conquistas ------------------- */
+.secao-conquistas {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.estatisticas-conquistas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.caixa-estatistica {
+    background-color: var(--background-card);
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    height: 230px;
+    transition: transform 0.3s;
+    border-top: 3px solid var(--primary-color);
+}
+
+.caixa-estatistica:hover {
+    transform: translateY(-10px);
+}
+
+.icone-estatistica {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.numero-estatistica {
+    font-family: "Arimo", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    color: #fff;
+}
+
+.rotulo-estatistica {
+    font-size:15px;
+    color: #aaa;
+}
+
+.lenda-brasileira {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--background-card);
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 5px solid var(--primary-color);
+}
+
+.imagem-lenda {
+    width: 410px;
+    height: 300px;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.texto-lenda h3 {
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.texto-lenda p {
+     font-family: "Arimo", sans-serif;
+     font-weight: 500;
+     color: #fff;
+     font-size: 17px;
+}
+
+.texto-lenda strong {
+    font-family: "Arimo", sans-serif;
+    font-weight: 500;
+}
+
+/* ------------------- Seção Troféus Históricos ------------------- */
+.secao-trofeus {
+    background-color: var(--background-dark);
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 60px;
+}
+
+.lista-trofeus {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.item-trofeu {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-card);
+    padding: 15px 25px;
+    border-radius: 5px;
+    border-left: 5px solid var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+.item-trofeu:hover {
+    background-color: #20204A;
+}
+
+.icone-trofeu {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--primary-color);
+}
+
+.ano-trofeu {
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 20px;
+    color: var(--primary-color);
+    min-width: 50px;
+}
+
+.nome-trofeu {
+    font-family: "Arimo", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    flex-grow: 1;
+}
+
+/* ------------------- Rodapé (Footer) ------------------- */
+.rodape-principal {
+    background-color: var(--background-dark);
+    padding: 40px 5%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legado-eterno {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legado-eterno p:first-child {
+    font-size: 2rem;
+    color: #e02148;
+    /* Coração vermelho */
+    margin-bottom: 5px;
+}
+
+.texto-legado {
+    font-family: "Arimo", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.texto-legado-secundario {
+    font-family: "Arimo", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* ------------------- Media Queries (Responsividade) ------------------- */
+@media (max-width: 800px) {
+    .cabecalho-principal {
+        flex-direction: column;
+    }
+
+    .nav-principal ul {
+        padding: 10px 0 0;
+        justify-content: center;
+    }
+
+    .container-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-imagem-sobre {
+        max-width: 100%;
+    }
+
+    .estatisticas-conquistas {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .caixa-estatistica {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .lenda-brasileira {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-trofeu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .icone-trofeu,
+    .ano-trofeu {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
