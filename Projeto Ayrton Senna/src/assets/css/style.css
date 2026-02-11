@@ -12,6 +12,7 @@ body {
     color: #F0F0F0;
     /* Cor do texto padrão */
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 /* Variáveis de Cores */
@@ -65,16 +66,32 @@ body {
 }
 
 .nav-principal ul li a {
+    font-family: "Arimo", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s;
 }
 
-.nav-principal ul li a #amarelo:hover {
-    transition: color #FDC700 0.3s;
+.verde:hover {
+    color: #05DF72;
+    transition: 0.6s;
 }
 
+.amarelo:hover {
+    color: #FDC700;
+    transition: 0.6s;
+}
+
+.azul:hover {
+    color: #51A2FF;
+    transition: 0.6s;
+}
+
+.vermelho:hover {
+    color: #ff0000;
+    transition: 0.6s;
+}
 
 
 /* ------------------- Seção Principal (Hero) ------------------- */
@@ -410,6 +427,23 @@ body {
     color: #777;
 }
 
+.btn-topo {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    background-color: #333; /* Cor do fundo */
+    color: white; /* Cor da seta */
+    padding: 10px 20px;
+    border-radius: 50%; /* Botão redondo */
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.btn-topo:hover {
+    background-color: #555; /* Cor ao passar o mouse */
+}
 /* ------------------- Media Queries (Responsividade) ------------------- */
 @media (max-width: 800px) {
     .cabecalho-principal {
